@@ -9,31 +9,31 @@ class Node:
 
 class List:
     def __init__(self):
-        # Посилання на перший элемент
+        # Reference to the first element
         self.head = None
 
     def append(self, value):
         '''
-        Додавання нового елементу в кінець зв'язного списку.
-        Час роботи O(n).
+        Adding a new element to the end of a linked list.
+        Operating time O(n).
         '''
 
-        # Якщо немає першого елемента, то створюємо та закінчуємо роботу
+        # If there is no first element, create and terminate
         if self.head is None:
             self.head = Node(value)
             return
 
-        # Перебираємо по черзі всі елементи, щоб знайти останній
+        # Iterating through all elements sequentially to find the last one
         current = self.head
         while current.next_node is not None:
             current = current.next_node
 
-        # Створюємо посилання для останнього елементу на новий
+        # Creating a reference for the last element to the new one
         current.next_node = Node(value)
 
     def __str__(self):
         '''
-        Повертає всі елементи зв'язного списку в вигляді рядку
+        Returns all elements of the linked list as a string
         '''
         current = self.head
         values = "["
