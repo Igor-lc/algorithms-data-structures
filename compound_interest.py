@@ -1,3 +1,5 @@
+
+
 def compound(amount, year_percent, months):
     months_percent = year_percent / 12
     for i in range(months):
