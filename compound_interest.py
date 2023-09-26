@@ -22,6 +22,7 @@ and the duration of the deposit in months.	 Сперва мы вычисляем
 а для пятилетнего вклада потребуется 60. When calculating a semi-annual deposit, the loop will perform only 6 iterations, while for a five-year deposit, it will require 60 iterations. 
 Однако есть альтернативное решение в 1 действие. However, there is an alternative solution that requires just one calculation. Расчет можно сделать с помощью специальной формулы, вместо цикла. 
 The calculation can be done using a specific formula instead of a loop:'''
+
 def compound(amount, year_percent, months):
     months_percent = year_percent / 12
     return amount * (1 + months_percent / 100) ** months
