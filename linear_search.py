@@ -42,3 +42,10 @@ print(linear_search([4, 5, 6, 18, 19, 20], 21))
 он гораздо медленнее других алгроритмов поиска, но о них позже, а сейчас рассмотрим простой алгоритм сортировки данных. 
 Overall, linear search, while allowing working with any lists, is much slower than other search algorithms. However, there will be separate articles about them. 
 Now, let's consider a simple data sorting algorithm.'''
+
+def linear_search(values, value):
+    return next((i for i, v in enumerate(values) if v == value), -1)
+
+
+idx = linear_search([1, 2, 3, 4], 3)
+print(idx)
