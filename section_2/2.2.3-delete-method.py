@@ -46,6 +46,7 @@ class List:
         '''
         current = self.top.next_node
         values = "["
+
         while current is not None:
             end = ", " if current.next_node else ""
             values += str(current) + end
